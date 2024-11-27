@@ -29,7 +29,7 @@ def betterLevenshtein(lev, l1, l2):
 
 hashIPA_list = [[]] * 26
 def loadHashIPA():
-    f = open("IndianNamesIPA.csv", "r")
+    f = open("db/IndianNamesIPA.csv", "r")
     c = csv.reader(f)
     nameHashed = [row for row in c]
 
@@ -40,7 +40,7 @@ def loadHashIPA():
 
 hasIPADict = {}
 def loadHashDict():
-    f = open("IndianNamesIPA.csv", "r")
+    f = open("db/IndianNamesIPA.csv", "r")
     c = csv.reader(f)
     nameHashed = [row for row in c]
 

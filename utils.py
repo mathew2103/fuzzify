@@ -24,8 +24,8 @@ def betterLevenshtein(lev, l1, l2):
 
 
 def convertAlltoHash(): 
-    f = open("IndianNamesUnique.csv", "r")
-    f2 = open("IndianNamesHashed.csv", "w")
+    f = open("db/IndianNamesUnique.csv", "r")
+    f2 = open("db/IndianNamesHashed.csv", "w")
     c2 = writer(f2)
     c = reader(f,delimiter="\n")
     names = [row[0] for row in c]
@@ -38,8 +38,8 @@ def convertAlltoHash():
 
 # Only use when converting names to IPA
 def convertAlltoIPA():
-    f = open("IndianNamesHashed.csv", "r")
-    f2 = open("IndianNamesIPA.csv", "r+")
+    f = open("db/IndianNamesHashed.csv", "r")
+    f2 = open("db/IndianNamesIPA.csv", "r+")
     
     x = len(f2.readlines())
     
@@ -79,7 +79,7 @@ def convertAlltoIPA():
 
 # OLD CODE: Go through the file every time you want to check
 def findNearbyHashes(name):
-    f = open("IndianNamesIPA.csv", "r")
+    f = open("db/IndianNamesIPA.csv", "r")
     c = csv.reader(f)
     nameHashed = [row for row in c]
 
