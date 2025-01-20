@@ -1,5 +1,7 @@
 # Fuzzify backend
 
+Project for the SIH Grand Finale 2024: Fuzzify addresses challenges faced by police officers and others managing large public databases, where variations in names—such as Laxmi being written as Lakshmi, Lakxmy, or Lackshmy—create inconsistencies. Fuzzify leverages a fine-tuned Lama 3.2 1B model, optimized for lightweight performance, to predict all possible pronunciations of a given name in English Latin script. It outputs these variations in IPA (International Phonetic Alphabet) notation, effectively capturing the full range of pronunciations. A custom embedder then converts the IPA representations into vectors, which are stored in a vector database. Searches are efficiently performed using the cosine similarity algorithm to match and retrieve relevant results
+
 ## To start the api to the backend:
 
 ### Running the App Locally
